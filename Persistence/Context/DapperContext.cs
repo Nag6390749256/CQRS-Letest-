@@ -19,5 +19,13 @@ namespace Persistence.Context
                 return res;
             }
         }
+        public async Task<IEnumerable<T>> GetListAsync<T>(string prodName, object param, CommandType commandType)
+        {
+            using (SqlConnection db = new SqlConnection(_dbConnectionString))
+            {
+                var res = await db.QueryAsync<T>(prodName, param, commandType: commandType);
+                return res;
+            }
+        }
     }
 }
