@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
+    <PackageReference Include="MediatR" Version="10.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
 </Project>
